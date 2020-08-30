@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiraAutomationTests", "JiraAutomationTests.csproj", "{8B584B8B-37DB-46BD-8BF1-9CDFD34BD776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JiraAutomationCore", "..\JiraAutomationCore\JiraAutomationCore.csproj", "{435C5243-9EFA-4007-BD76-7BB2B8E2AEAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B584B8B-37DB-46BD-8BF1-9CDFD34BD776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B584B8B-37DB-46BD-8BF1-9CDFD34BD776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B584B8B-37DB-46BD-8BF1-9CDFD34BD776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B584B8B-37DB-46BD-8BF1-9CDFD34BD776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{435C5243-9EFA-4007-BD76-7BB2B8E2AEAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{435C5243-9EFA-4007-BD76-7BB2B8E2AEAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{435C5243-9EFA-4007-BD76-7BB2B8E2AEAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{435C5243-9EFA-4007-BD76-7BB2B8E2AEAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D17282A-7543-4C20-9797-4C8B863D21E2}
+	EndGlobalSection
+EndGlobal
