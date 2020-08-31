@@ -22,7 +22,10 @@ namespace JiraAutomationTests
                 .fillUsername("sebas.adm1n10")
                 .fillPassword("sebas12")
                 .ClickLogin();
-            Thread.Sleep(5000)
+            Thread.Sleep(5000);
+            var jiraLogo = driver.FindElementById("jira");
+            Assert.IsTrue(jiraLogo.Displayed);
+
             ;
         }
     }
