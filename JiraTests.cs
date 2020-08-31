@@ -11,7 +11,7 @@ namespace JiraAutomationTests
     {
         ChromeDriver _driver;
         [SetUp]
-        public void setUp()
+        public void SetUp()
         {
             _driver = new ChromeDriver
             {
@@ -44,10 +44,15 @@ namespace JiraAutomationTests
             Thread.Sleep(5000);
             var dashboardPage = new DashboardPage(_driver);
             Assert.IsTrue(dashboardPage.LogoDisplayed());
+            dashboardPage.ClickCreateButton();
+            Thread.Sleep(1000);
+            dashboardPage.FillSummaryField("test");
+            dashboardPage.ExpandSprintDropDown();
+            Thread.Sleep(5000);
         }
 
         [TearDown]
-        public void tearDown()
+        public void TearDown()
         {
             _driver.Close();
         }
