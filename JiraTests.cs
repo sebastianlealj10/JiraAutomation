@@ -18,12 +18,12 @@ namespace JiraAutomationTests
             driver.Manage().Window.Maximize();
 
             var loginPage = new LoginPage(driver);
-            loginPage.fillUsername("sebas.adm1n10");
-            loginPage.fillPassword("sebas12");
-            loginPage.ClickLogin();
-
-
-            Thread.Sleep(5000);
+            loginPage
+                .fillUsername("sebas.adm1n10")
+                .fillPassword("sebas12")
+                .ClickLogin();
+            Thread.Sleep(5000)
+            ;
         }
     }
 }

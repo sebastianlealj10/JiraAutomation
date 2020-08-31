@@ -19,19 +19,22 @@ namespace ClassLibrary1
             this.driver = driver;
         }
 
-        public void fillUsername(string username)
+        public LoginPage fillUsername(string username)
         {
             Username.SendKeys(username);
+            return this;
         }
 
-        public void fillPassword(string password)
+        public LoginPage fillPassword(string password)
         {
             Password.SendKeys(password);
+            return this;
         }
 
-        public void ClickLogin()
+        public LoginPage ClickLogin()
         {
             LoguinButton.Click();
+            return this;
         }
 
 
