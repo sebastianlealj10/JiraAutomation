@@ -14,6 +14,7 @@ namespace JiraAutomationTests
             {
                 Url = "http://localhost:8080/"
             };
+
             driver.Manage().Window.Maximize();
             var username = driver.FindElementById("login-form-username");
             username.SendKeys("sebas.adm1n10");
