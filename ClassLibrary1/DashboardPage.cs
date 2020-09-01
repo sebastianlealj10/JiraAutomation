@@ -30,6 +30,7 @@ namespace ClassLibrary1
         public DashboardPage ClickCreateButton()
         {
             CreateButton.Click();
+            Thread.Sleep(3000);
             return this;
         }
 
