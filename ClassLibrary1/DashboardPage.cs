@@ -14,6 +14,8 @@ namespace ClassLibrary1
         IWebElement SummaryTextBox => wait.Until(driver => driver.FindElement(By.Id("summary")));
         IWebElement SprintDropDown => driver.FindElement(By.Id("customfield_10100-field"));
         IWebElement SendFormButton => driver.FindElement(By.Id("create-issue-submit"));
+        IWebElement CreatedAlert => wait.Until(driver => driver.FindElement(By.ClassName("aui-message-success")));
+        
 
         public DashboardPage(IWebDriver driver, WebDriverWait wait)
         {
@@ -50,6 +52,11 @@ namespace ClassLibrary1
         {
             SendFormButton.Click();
             return this;
+        }
+
+        public bool CreatedAlertDisplayed()
+        {
+            return CreatedAlert.Displayed;
         }
 
     }
