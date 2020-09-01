@@ -15,7 +15,7 @@ namespace ClassLibrary1
         IWebElement CreateButton => driver.FindElement(By.Id("create_link"));
         IWebElement SummaryTextBox => driver.FindElement(By.Id("summary"));
         IWebElement SprintDropDown => driver.FindElement(By.Id("customfield_10100-field"));
-        IWebElement SelectSuggestionSprint => driver.FindElement(By.CssSelector(".ajs-layer"));
+        IWebElement SendFormButton => driver.FindElement(By.Id("create-issue-submit"));
 
         public DashboardPage(IWebDriver driver)
         {
@@ -41,9 +41,17 @@ namespace ClassLibrary1
 
         public DashboardPage ExpandSprintDropDown()
         {
+            
             SprintDropDown.Click();
             Thread.Sleep(5000);
-            SelectSuggestionSprint.Click();
+            SprintDropDown.SendKeys(Keys.Enter);
+            return this;
+        }
+
+        public DashboardPage SenndIssueForm()
+        {
+
+            SendFormButton.Click();
             Thread.Sleep(5000);
             return this;
         }

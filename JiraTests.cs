@@ -45,16 +45,17 @@ namespace JiraAutomationTests
             var dashboardPage = new DashboardPage(_driver);
             Assert.IsTrue(dashboardPage.LogoDisplayed());
             dashboardPage.ClickCreateButton();
-            Thread.Sleep(1000);
-            dashboardPage.FillSummaryField("test");
-            dashboardPage.ExpandSprintDropDown();
             Thread.Sleep(5000);
+            dashboardPage.FillSummaryField("test");
+            Thread.Sleep(5000);
+            dashboardPage.ExpandSprintDropDown();
+            dashboardPage.SenndIssueForm();
         }
 
         [TearDown]
         public void TearDown()
         {
-            _driver.Close();
+            //_driver.Close();
         }
     }
 }
