@@ -2,6 +2,8 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
+using System;
 using System.Threading;
 
 namespace JiraAutomationTests
@@ -10,6 +12,7 @@ namespace JiraAutomationTests
     public class JiraTests
     {
         ChromeDriver _driver;
+        private WebDriverWait _wait;
         [SetUp]
         public void SetUp()
         {
@@ -18,6 +21,7 @@ namespace JiraAutomationTests
                 Url = "http://localhost:8080/"
             };
             _driver.Manage().Window.Maximize();
+            _wait = new WebDriverWait(_driver, new TimeSpan(0, 0, 30));
         }
 
         [Test]
@@ -42,7 +46,7 @@ namespace JiraAutomationTests
                 .fillPassword("sebas12")
                 .ClickLogin();
             Thread.Sleep(5000);
-            var dashboardPage = new DashboardPage(_driver);
+            var dashboardPage = new DashboardPage(_driver, _wait);
             Assert.IsTrue(dashboardPage.LogoDisplayed());
             dashboardPage
                 .ClickCreateButton()

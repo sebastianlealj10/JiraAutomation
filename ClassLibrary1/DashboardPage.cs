@@ -1,25 +1,24 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
+
 
 namespace ClassLibrary1
 {
     public class DashboardPage
     {
         IWebDriver driver;
+        private WebDriverWait wait;
         IWebElement JiraLogo => driver.FindElement(By.Id("jira"));
         IWebElement CreateButton => driver.FindElement(By.Id("create_link"));
-        IWebElement SummaryTextBox => driver.FindElement(By.Id("summary"));
+        IWebElement SummaryTextBox => wait.Until(driver => driver.FindElement(By.Id("summary")));
         IWebElement SprintDropDown => driver.FindElement(By.Id("customfield_10100-field"));
         IWebElement SendFormButton => driver.FindElement(By.Id("create-issue-submit"));
 
-        public DashboardPage(IWebDriver driver)
+        public DashboardPage(IWebDriver driver, WebDriverWait wait)
         {
             this.driver = driver;
+            this.wait = wait;
         }
 
         public bool LogoDisplayed()
@@ -30,7 +29,6 @@ namespace ClassLibrary1
         public DashboardPage ClickCreateButton()
         {
             CreateButton.Click();
-            Thread.Sleep(3000);
             return this;
         }
 
@@ -44,16 +42,13 @@ namespace ClassLibrary1
         {
             
             SprintDropDown.Click();
-            Thread.Sleep(5000);
             SprintDropDown.SendKeys(Keys.Enter);
             return this;
         }
 
         public DashboardPage SenndIssueForm()
         {
-
             SendFormButton.Click();
-            Thread.Sleep(5000);
             return this;
         }
 
