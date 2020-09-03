@@ -48,8 +48,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DashboardPage.cs" />
-    <Compile Include="LoginPage.cs" />
+    <Compile Include="PageObjects\DashboardPage.cs" />
+    <Compile Include="PageObjects\LoginPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
