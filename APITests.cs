@@ -6,10 +6,10 @@ using System;
 namespace JiraAutomation
 {
     [TestFixture]
-    public class UnitTest1
+    public class APITests
     {
         [Test]
-        public void TestMethod1()
+        public void ANewEpicIsCreatedUsingTheAPI()
         {
             var restClient = new RestClient("http://localhost:8080")
             {
@@ -19,7 +19,7 @@ namespace JiraAutomation
             string body = "{\"fields\": {\"project\":{\"key\": \"DEMO\"},\"summary\": \"My Epic created from the API\",\"description\": \"Creating of an Epic using project keys and issue type names using the REST API\",\"issuetype\": {\"name\": \"Epic\"},\r\n\"customfield_10103\": \"MyEpic\"}}";
             request.AddParameter("application/json; charset=utf-8", body, ParameterType.RequestBody);
             var response = restClient.Post(request);
-            Console.WriteLine(response);
+            Console.WriteLine(response.Content);
         }
     }
 }
