@@ -6,6 +6,7 @@ using OpenQA.Selenium.Support.UI;
 using RestSharp;
 using RestSharp.Authenticators;
 using System;
+using System.Configuration;
 using System.Threading;
 
 namespace JiraAutomationTests
@@ -15,12 +16,14 @@ namespace JiraAutomationTests
     {
         ChromeDriver _driver;
         private WebDriverWait _wait;
+        private readonly string BaseUrl = ConfigurationManager.AppSettings["BaseUrl"];
+
         [SetUp]
         public void SetUp()
         {
             _driver = new ChromeDriver
             {
-                Url = "http://localhost:8080/"
+                Url = BaseUrl
             };
             _driver.Manage().Window.Maximize();
             _wait = new WebDriverWait(_driver, new TimeSpan(0, 0, 30));
@@ -31,8 +34,8 @@ namespace JiraAutomationTests
         {
             var loginPage = new LoginPage(_driver);
             loginPage
-                .fillUsername("sebas.adm1n10")
-                .fillPassword("Demo1234")
+                .fillUsername()
+                .fillPassword()
                 .ClickLogin();
             Thread.Sleep(5000);
             var jiraLogo = _driver.FindElementById("jira");
@@ -44,8 +47,8 @@ namespace JiraAutomationTests
         {
             var loginPage = new LoginPage(_driver);
             loginPage
-                .fillUsername("sebas.adm1n10")
-                .fillPassword("Demo1234")
+                .fillUsername()
+                .fillPassword()
                 .ClickLogin();
             Thread.Sleep(5000);
             var dashboardPage = new DashboardPage(_driver, _wait);
