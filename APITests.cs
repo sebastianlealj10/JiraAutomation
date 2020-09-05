@@ -29,7 +29,9 @@ namespace JiraAutomation
         [Test]
         public void ANewEpicIsCreatedUsingTheAPI()
         {
-            var createIssue = new CreateIssueBuilder().Build();
+            var createIssue = new CreateIssueBuilder().
+                WithIssueType("Epic").
+                Build();
             var issue = new Issue(restClient);
             Console.WriteLine(issue.CreateIssue(createIssue));
         }

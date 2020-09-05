@@ -18,8 +18,7 @@ namespace ClassLibrary1.Models
         public Issuetype issuetype { get; set; }
         public string customfield_10104 { get; set; }
     }
-
-    public class Project
+     public class Project
     {
        public string key { get; set; }
     }

@@ -73,6 +73,7 @@
   <ItemGroup>
     <Compile Include="APIWorkflow\Issue.cs" />
     <Compile Include="Builders\CreateIssueBuilder.cs" />
+    <Compile Include="Models\CreateIssueResponse.cs" />
     <Compile Include="Models\IssueCreation.cs" />
     <Compile Include="PageObjects\DashboardPage.cs" />
     <Compile Include="PageObjects\LoginPage.cs" />
