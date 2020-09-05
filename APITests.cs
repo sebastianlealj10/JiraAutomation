@@ -4,6 +4,7 @@ using RestSharp.Authenticators;
 using System.Configuration;
 using ClassLibrary1;
 using System;
+using ClassLibrary1.Builders;
 
 namespace JiraAutomation
 {
@@ -17,7 +18,7 @@ namespace JiraAutomation
         RestClient restClient;
 
         [SetUp]
-        public void setUp()
+        public void SetUp()
         {
             restClient = new RestClient(BaseUrl)
             {
@@ -28,8 +29,9 @@ namespace JiraAutomation
         [Test]
         public void ANewEpicIsCreatedUsingTheAPI()
         {
+            var createIssue = new CreateIssueBuilder().Build();
             var issue = new Issue(restClient);
-            Console.WriteLine(issue.CreateIssue("Epic"));
+            Console.WriteLine(issue.CreateIssue(createIssue));
         }
     }
 }
