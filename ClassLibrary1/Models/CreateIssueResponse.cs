@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1.Models
 {
-    class CreateIssueResponse
+    public class CreateIssueResponse
     {
         public string id { get; set; }
         public string key { get; set; }

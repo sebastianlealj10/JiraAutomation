@@ -27,13 +27,16 @@ namespace JiraAutomation
         }
 
         [Test]
-        public void ANewEpicIsCreatedUsingTheAPI()
+        public void AssingANewEpicToAStory()
         {
             var createIssue = new CreateIssueBuilder().
                 WithIssueType("Epic").
+                WithIssueName("EpicTest").
                 Build();
             var issue = new Issue(restClient);
-            Console.WriteLine(issue.CreateIssue(createIssue));
+            var objectResponse = issue.CreateIssue(createIssue);
+            var statusCodeResponse = issue.UpdateIssue("DEMO-25", objectResponse.key);
+            Assert.AreEqual("NoContent", statusCodeResponse);
         }
     }
 }

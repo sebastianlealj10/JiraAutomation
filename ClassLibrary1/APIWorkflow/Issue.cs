@@ -1,4 +1,6 @@
-﻿using ClassLibrary1.Models;
+﻿using ClassLibrary1.Builders;
+using ClassLibrary1.Models;
+using Newtonsoft.Json;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -18,12 +20,25 @@ namespace ClassLibrary1
             this.restClient = restClient;
         }
 
-        public string CreateIssue (IssueCreation issueCreation)
+        public CreateIssueResponse CreateIssue (IssueCreation issueCreation)
         {
             var request = new RestRequest(IssueEndpoint);
             request.AddHeader("Content-Type", "application/json");
             request.AddJsonBody(issueCreation);
-            return restClient.Post(request).Content;
+            var content = restClient.Post(request).Content;
+            return JsonConvert.DeserializeObject<CreateIssueResponse>(content);
+        }
+
+        public string UpdateIssue(string issueToUpdate, string epic)
+        {
+            var request = new RestRequest(IssueEndpoint + issueToUpdate);
+            var updateBody = new UpdateIssueBuilder()
+                .WithIssueToUpdate(epic)
+                .Build();
+            request.AddHeader("Content-Type", "application/json");
+            request.AddJsonBody(updateBody);
+            var response = restClient.Put(request);
+            return response.StatusCode.ToString();
         }
 
     }

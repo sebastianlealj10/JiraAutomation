@@ -41,5 +41,11 @@ namespace ClassLibrary1.Builders
             return this;
         }
 
+        public CreateIssueBuilder WithIssueName(string issueName)
+        {
+            _customfield_10104 = issueName;
+            return this;
+        }
+
     }
 }
