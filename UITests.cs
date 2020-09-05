@@ -32,7 +32,7 @@ namespace JiraAutomationTests
             var loginPage = new LoginPage(_driver);
             loginPage
                 .fillUsername("sebas.adm1n10")
-                .fillPassword("sebas12")
+                .fillPassword("Demo1234")
                 .ClickLogin();
             Thread.Sleep(5000);
             var jiraLogo = _driver.FindElementById("jira");
@@ -45,7 +45,7 @@ namespace JiraAutomationTests
             var loginPage = new LoginPage(_driver);
             loginPage
                 .fillUsername("sebas.adm1n10")
-                .fillPassword("sebas12")
+                .fillPassword("Demo1234")
                 .ClickLogin();
             Thread.Sleep(5000);
             var dashboardPage = new DashboardPage(_driver, _wait);
