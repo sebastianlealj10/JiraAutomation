@@ -12,7 +12,7 @@ namespace JiraAutomation
         private readonly string BaseUrl = ConfigurationManager.AppSettings["BaseUrl"];
         private readonly string IssueEndpoint = ConfigurationManager.AppSettings["IssueEndpoint"];
         private readonly string ConfigUsername = ConfigurationManager.AppSettings["Username"];
-        private string ConfigPassword = ConfigurationManager.AppSettings["Password"];
+        private readonly string ConfigPassword = ConfigurationManager.AppSettings["Password"];
 
         [Test]
         public void ANewEpicIsCreatedUsingTheAPI()

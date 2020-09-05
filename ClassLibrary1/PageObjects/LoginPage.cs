@@ -5,13 +5,12 @@ namespace ClassLibrary1
 {
     public class LoginPage
     {
+        private readonly string ConfigUsername = ConfigurationManager.AppSettings["Username"];
+        private readonly string ConfigPassword = ConfigurationManager.AppSettings["Password"];
         IWebDriver driver;
         private IWebElement Username => driver.FindElement(By.Id("login-form-username"));
         private IWebElement Password => driver.FindElement(By.Id("login-form-password"));
         private IWebElement LoguinButton => driver.FindElement(By.Id("login"));
-        private readonly string ConfigUsername = ConfigurationManager.AppSettings["Username"];
-        private string ConfigPassword = ConfigurationManager.AppSettings["Password"];
-
 
         public LoginPage(IWebDriver driver)
         {
