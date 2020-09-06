@@ -42,7 +42,6 @@ namespace ClassLibrary1
 
         public DashboardPage ExpandSprintDropDown()
         {
-            
             SprintDropDown.Click();
             SprintDropDown.SendKeys(Keys.Enter);
             return this;

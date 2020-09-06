@@ -56,7 +56,6 @@ namespace JiraAutomationTests
             dashboardPage
                 .ClickCreateButton()
                 .FillSummaryField("test")
-                .ExpandSprintDropDown()
                 .SenndIssueForm();
             Assert.IsTrue(dashboardPage.CreatedAlertDisplayed());
         }
