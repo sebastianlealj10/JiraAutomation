@@ -1,6 +1,6 @@
-﻿using ClassLibrary1.Models;
+﻿using SolutionCore.Models;
 
-namespace ClassLibrary1.Builders
+namespace SolutionCore.Builders
 {
     public class CreateIssueBuilder
     {

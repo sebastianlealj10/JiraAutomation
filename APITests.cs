@@ -2,9 +2,8 @@
 using RestSharp;
 using RestSharp.Authenticators;
 using System.Configuration;
-using ClassLibrary1;
-using System;
-using ClassLibrary1.Builders;
+using SolutionCore.Builders;
+using SolutionCore;
 
 namespace JiraAutomation
 {

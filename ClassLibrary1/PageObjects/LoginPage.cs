@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System.Configuration;
 
-namespace ClassLibrary1
+namespace SolutionCore
 {
     public class LoginPage
     {

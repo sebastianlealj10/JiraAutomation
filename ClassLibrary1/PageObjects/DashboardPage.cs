@@ -1,9 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.WaitHelpers;
 
 
-namespace ClassLibrary1
+namespace SolutionCore
 {
     public class DashboardPage
     {

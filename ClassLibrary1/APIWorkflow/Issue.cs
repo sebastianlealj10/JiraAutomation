@@ -1,15 +1,10 @@
-﻿using ClassLibrary1.Builders;
-using ClassLibrary1.Models;
+﻿using SolutionCore.Builders;
+using SolutionCore.Models;
 using Newtonsoft.Json;
 using RestSharp;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace SolutionCore
 {
     public class Issue
     {

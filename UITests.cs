@@ -1,13 +1,9 @@
-﻿using ClassLibrary1;
+﻿using SolutionCore;
 using NUnit.Framework;
-using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
-using RestSharp;
-using RestSharp.Authenticators;
 using System;
 using System.Configuration;
-using System.Threading;
 
 namespace JiraAutomationTests
 {
