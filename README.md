@@ -2,17 +2,17 @@ Challenge
 
 Business requirements
 
-A user is able to create a new ticket and assign it to the current sprint
-A user is able to create a epic and assing a story to that epic
-A user is able to move a ticket to the current sprint from the backlog
-A user is able to create a bug and relate to a story
-A user is able to create a new custom field and assign it a value in a issue
-A user is able to move a ticket from TO DO to In Progress and finally to DONE
-A user is able to create a new label and mark it to a issue
-A user is able to retrieve all the issues assigned to a user
-A user is able to write a comment in a issue
-A user is able to update the description and summary of a issue
-A user is able to see all the issues by type for a project
+- A user is able to create a new ticket and assign it to the current sprint
+- A user is able to create a epic and assing a story to that epic
+- A user is able to move a ticket to the current sprint from the backlog
+- A user is able to create a bug and relate to a story
+- A user is able to create a new custom field and assign it a value in a issue
+- A user is able to move a ticket from TO DO to In Progress and finally to DONE
+- A user is able to create a new label and mark it to a issue
+- A user is able to retrieve all the issues assigned to a user
+- A user is able to write a comment in a issue
+- A user is able to update the description and summary of a issue
+- A user is able to see all the issues by type for a project
 
 Test cases - Scenarios
 1.Write the test cases or scenarios for the defined business flows that guarantee a 100% of test coverage over the requirements.
