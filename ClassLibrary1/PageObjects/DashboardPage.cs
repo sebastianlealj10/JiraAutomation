@@ -12,7 +12,7 @@ namespace ClassLibrary1
         IWebElement JiraLogo => driver.FindElement(By.Id("jira"));
         IWebElement CreateButton => driver.FindElement(By.Id("create_link"));
         IWebElement SummaryTextBox => wait.Until(driver => driver.FindElement(By.Id("summary")));
-        IWebElement SprintDropDown => driver.FindElement(By.Id("customfield_10100-field"));
+        IWebElement SprintDropDown => wait.Until(driver => driver.FindElement(By.Id("customfield_10100-field")));
         IWebElement SendFormButton => driver.FindElement(By.Id("create-issue-submit"));
         IWebElement CreatedAlert => wait.Until(driver => driver.FindElement(By.ClassName("aui-message-success")));
         
