@@ -15,11 +15,11 @@ Business requirements
 - A user is able to see all the issues by type for a project
 
 Test cases - Scenarios
-1.Write the test cases or scenarios for the defined business flows that guarantee a 100% of test coverage over the requirements.
-2.Indicate the critical path of the application and what are the automatable test cases.
-3.Define a MVP for the challenge and implement the test solution for that.
-4.Choose some features from the technology stack to implement in the MVP and mention what would be the next technologies to implement in the next releases.
-5.Expose the test strategy in 10 minuts
+1. Write the test cases or scenarios for the defined business flows that guarantee a 100% of test coverage over the requirements.
+2. Indicate the critical path of the application, what test cases should be tested using the API and the UI and what are the automatable test cases.
+3. Define a MVP for the challenge and implement the test solution for that.
+4. Choose the features that you consider as high priority from the technology stack to implement them in the MVP and mention what would be the next technologies to implement in the next releases.
+5. Expose the test strategy in 10 minuts
 
 Technology stack
 
