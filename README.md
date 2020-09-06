@@ -34,7 +34,7 @@ Technology stack
 
 Challenge conditions
 
-1. Groups of 2 people
+1. Groups of 2
 2. The code needs to be uploaded to Github and the repo should be share with me via teams before the presentation
 3. You can use the repo used in the workshop as guide but you will need to create a new project
 
