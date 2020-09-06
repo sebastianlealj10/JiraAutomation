@@ -37,7 +37,6 @@ namespace JiraAutomationTests
                 .fillUsername()
                 .fillPassword()
                 .ClickLogin();
-            Thread.Sleep(5000);
             var jiraLogo = _driver.FindElementById("jira");
             Assert.IsTrue(jiraLogo.Displayed);
         }
@@ -50,7 +49,6 @@ namespace JiraAutomationTests
                 .fillUsername()
                 .fillPassword()
                 .ClickLogin();
-            Thread.Sleep(5000);
             var dashboardPage = new DashboardPage(_driver, _wait);
             Assert.IsTrue(dashboardPage.LogoDisplayed());
             dashboardPage
