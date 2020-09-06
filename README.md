@@ -40,7 +40,7 @@ Challenge conditions
 
 Assesment
 
-Presentation 50%
-Clean Code and Solid principles 25%
-Design patters and abstraction 25%
-Extra points for participation in the workshop
+- Presentation 50%
+- Clean Code and Solid principles 25%
+- Design patters and abstraction 25%
+- Extra points for participation in the workshop
