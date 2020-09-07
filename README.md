@@ -23,14 +23,16 @@ Test cases - Scenarios
 
 Technology stack
 
-- Paralellism 
-- Reports
-- CI tool
-- POM - Serialization - Builders (Mandatory)
-- Abstraction (Mandatory)
-- Test coverage
-- Config file
-- Multiple browsers - Factory
+- Paralellism https://docs.nunit.org/articles/nunit/writing-tests/attributes/parallelizable.html
+- Reports https://github.com/unickq/allure-nunit
+- CI tool https://www.jetbrains.com/es-es/teamcity/download/#section=get
+- POM - Serialization - Builders (Mandatory) Workshop
+- Abstraction (Mandatory) Workshop
+- Test coverage https://blog.testlodge.com/writing-test-cases-from-user-stories-acceptance-criteria/
+- Config file https://docs.microsoft.com/en-us/troubleshoot/dotnet/csharp/store-custom-information-config-file
+- Multiple browsers - Factory https://www.toolsqa.com/selenium-webdriver/c-sharp/browser-factory-or-webdriver-factory/
+- BDD https://specflow.org/
+- DDT (Data provider) http://www.brendanconnolly.net/data-driven-testing-with-nunit-3/
 
 Challenge conditions
 
