@@ -34,7 +34,7 @@ namespace JiraAutomation
                 Build();
             var issue = new Issue(restClient);
             var objectResponse = issue.CreateIssue(createIssue);
-            var statusCodeResponse = issue.UpdateIssue("DEMO-25", objectResponse.key);
+            var statusCodeResponse = issue.UpdateIssue("DEMO-6", objectResponse.key);
             Assert.AreEqual("NoContent", statusCodeResponse);
         }
     }

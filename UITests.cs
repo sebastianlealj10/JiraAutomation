@@ -57,7 +57,7 @@ namespace JiraAutomationTests
         [TearDown]
         public void TearDown()
         {
-            _driver.Close();
+            //_driver.Close();
         }
     }
 }
