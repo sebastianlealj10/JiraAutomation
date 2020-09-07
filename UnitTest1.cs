@@ -14,15 +14,14 @@ namespace JiraAutomationTests
             {
                 Url = "http://localhost:8080/"
             };
+
             driver.Manage().Window.Maximize();
             var username = driver.FindElementById("login-form-username");
             username.SendKeys("sebas.adm1n10");
             var password = driver.FindElementById("login-form-password");
-            password.SendKeys("sebas12");
+            password.SendKeys("Demo1234");
             var loguinButton = driver.FindElementById("login");
             loguinButton.Click();
-            Thread.Sleep(1000);
-            //driver.Manage().Window.FullScreen();
             Thread.Sleep(5000);
         }
     }
